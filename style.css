@@ -1,0 +1,71 @@
+body.dark {
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    margin: 0;
+}
+
+/* LOGIN */
+.center {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.box {
+    border: 1px solid #00ff00;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+input, button {
+    background: black;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+    padding: 10px;
+    margin: 5px;
+}
+
+button:hover {
+    background: #00ff00;
+    color: black;
+}
+
+/* OS UI */
+.topbar {
+    background: #111;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #00ff00;
+}
+
+.desktop {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.icon {
+    border: 1px solid #00ff00;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* WINDOWS */
+.window {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    background: black;
+    border: 1px solid #00ff00;
+    padding: 10px;
+    width: 300px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #00ff00;
+}

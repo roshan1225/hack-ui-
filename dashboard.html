@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hack OS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark">
+
+<div class="topbar">
+    <span>HACK OS v2.0</span>
+    <button onclick="logout()">Shutdown</button>
+</div>
+
+<div class="desktop">
+    <div class="icon" onclick="openWindow('terminalWindow')">💻 Terminal</div>
+    <div class="icon" onclick="openWindow('scanWindow')">🛡 Scan</div>
+</div>
+
+<!-- TERMINAL WINDOW -->
+<div class="window" id="terminalWindow">
+    <div class="title">
+        Terminal
+        <button onclick="closeWindow('terminalWindow')">X</button>
+    </div>
+
+    <input id="cmd" placeholder="Enter command" onkeydown="runCommand(event)">
+    <div id="output"></div>
+</div>
+
+<!-- SCAN WINDOW -->
+<div class="window" id="scanWindow">
+    <div class="title">
+        System Scan
+        <button onclick="closeWindow('scanWindow')">X</button>
+    </div>
+
+    <p id="scanResult">Click scan...</p>
+    <button onclick="startScan()">Start Scan</button>
+</div>
+
+<!-- SOUND -->
+<audio id="clickSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+
+<script src="script.js"></script>
+
+<!-- AUTH CHECK -->
+<script>
+if (localStorage.getItem("auth") !== "true") {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
