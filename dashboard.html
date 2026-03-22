@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Control Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark">
+
+<h1>CONTROL PANEL</h1>
+
+<div class="menu">
+    <button onclick="openTerminal()">Terminal</button>
+    <button onclick="showScan()">Scan System</button>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<div id="scanBox" style="display:none;">
+    <p>Scanning system...</p>
+    <div id="scanResult"></div>
+</div>
+
+<div id="terminal" style="display:none;">
+    <p>> Terminal Ready</p>
+    <input id="cmd" placeholder="Enter command" onkeydown="runCommand(event)">
+    <div id="output"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
